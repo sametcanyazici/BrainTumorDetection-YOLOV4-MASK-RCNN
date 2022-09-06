@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <style>
+    body,
+    html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+      background-image: url(https://i.hizliresim.com/iwkw71m.gif);
+
+      /*background-color: rgb(235, 235, 235); */
+
+    }
+
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("/w3images/coffeehouse.jpg");
+      min-height: 75%;
+    }
+
+    .menu {
+      display: none;
+    }
+
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+
+      background: rgba(0, 0, 0, 0.50);
+      /* Black see-through */
+      background-image: url(https://images-ext-1.discordapp.net/external/8ah_nWad6HWSi8TRIr6aQ0CdV-Cd9qzwf-2yH-ZLiQk/https/i.hizliresim.com/bm0n1w5.png);
+      opacity: 70;
+
+
+      overflow: hidden;
+
+      width: 100%;
+      height: 0;
+      transition: .9s ease;
+
+
+    }
+
+    .parent {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .image1 {
+      position: relative;
+      top: 0;
+      left: 0;
+
+    }
+
+    .image2 {
+      position: absolute;
+      top: 90px;
+      left: 160px;
+
+    }
+
+    .main_container:hover .overlay {
+
+      height: 100%;
+    }
+  </style>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    $("#btnPrint").live("click", function () {
+      var divContents = $("#dvContainer").html();
+      var printWindow = window.open('', '', 'height=400,width=800');
+      printWindow.document.write('<html><head><title>DIV Contents</title>');
+      printWindow.document.write('</head><body >');
+      printWindow.document.write(divContents);
+      printWindow.document.write('</body></html>');
+      printWindow.document.close();
+      printWindow.print();
+    });
+  </script>
+
+
+
+</head>
+
+<body>
+
+  <form id="form1">
+
+    <div id="dvContainer">
+      <!-- Menu Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width:700px">
+
+          <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide"><b>SONUÇLAR</b></span></h5>
+
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'YOLO');" id="myLink">
+              <div class="w3-col s6 tablink"><b>SEGMENTASYON</b></div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Original');">
+              <div class="w3-col s6 tablink"><b>ORIJINAL GORUNTU</b> </div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Brain');">
+              <div class="w3-col s6 tablink"><b>BEYIN BÖLÜMLERİ</b></div>
+            </a>
+
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Crop');">
+              <div class="w3-col s6 tablink"><b>KIRPILMIŞ GÖRÜNTÜ</b></div>
+            </a>
+          </div>
+
+          <div id="YOLO" class="w3-container menu w3-padding-48 w3-card">
+
+            <center>
+
+              <div style="background-color: rgb(51, 47, 47); color: aliceblue;"> <b>Seçilen Dosya: {{ filename1 }}</b>
+              </div>
+              <br>
+
+              <div class="col-sm">
+                <span class="border border-primary">
+
+                  <img id="myimage" src="{{ user_image }}" alt="User Image" width="325" height="325"
+                    class="img-thumbnail">
+
+
+
+
+
+                </span>
+
+              </div>
+
+          </div>
+
+          <div id="Original" class="w3-container menu w3-padding-48 w3-card">
+            <center>
+
+
+
+              <div class="col-sm">
+                <span class="border border-primary">
+
+                  <img id="myimage" src="{{image}}" alt="User Image" width="325" height="325" class="img-thumbnail">
+
+                  <br><br><br>
+
+                </span>
+
+              </div>
+
+          </div>
+
+          <div id="Brain" class="w3-container menu w3-padding-48 w3-card">
+            <center>
+
+              <div class="col-sm">
+                <span class="border border-primary">
+                  <main>
+
+                    <div class="parent">
+                      <div id="sliderBox">
+                        <form>
+                          <label><b>ŞEFFAFLIK</b> </label>
+                          <p><input type="range" id="sliderOpacity" min="0" max="100" value="100" class="sliders" />
+                            <span id="numOpacity"></span>
+                        </form>
+                      </div>
+                      <img class="image1" src={{user_image}} alt="User Image" width="400" height="400"
+                        class="img-thumbnail" />
+
+                      <figure id="myimage1">
+                        <img id="myimage1" class="image2"
+                          src="https://images-ext-1.discordapp.net/external/8ah_nWad6HWSi8TRIr6aQ0CdV-Cd9qzwf-2yH-ZLiQk/https/i.hizliresim.com/bm0n1w5.png"
+                          alt="User Image" width="350" height="350" class="img-thumbnail" />
+
+
+                        <script type="text/javascript">
+                          const sliderOpacity = document.querySelector("#sliderOpacity");
+                          const img = document.querySelector("#myimage1");
+
+                          sliderOpacity.addEventListener('input', function () {
+                            img.style.opacity = (sliderOpacity.value) / 100;
+                            // I divide by 100 because "opacity" takes a value between 0 and 1.
+                          });
+
+                        </script>
+                      </figure>
+                      <img class="image13" src=static\css\lobs.png alt="User Image" width="500" height="200" class="img-thumbnail" />
+
+                  </main>
+
+                  
+
+                </span>
+
+              </div>
+
+          </div>
+          <div id="Crop" class="w3-container menu w3-padding-48 w3-card">
+            <center>
+
+
+              <br>
+
+              <div class="col-sm">
+                <span class="border border-primary">
+
+                  <img id="myimage" src="{{cropped}}" alt="User Image" width="325" height="325" class="img-thumbnail">
+
+
+                  <br><br><br>
+
+                </span>
+
+              </div>
+
+          </div>
+
+        </div>
+        
+    <CENTER><input type="button" value="PDF İNDİR" id="btnPrint" /></CENTER>
+      </div>
+
+    </div>
+
+
+  </form>
+
+  <script>
+    // Tabbed Menu
+    function openMenu(evt, menuName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("menu");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+      }
+      document.getElementById(menuName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+    }
+    document.getElementById("myLink").click();
+  </script>
+</body>
+
+</html>

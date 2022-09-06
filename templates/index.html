@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon"
+    href="data:image/png;base64,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"
+    type="image/x-icon">
+  <title style="font-family: cursive ;">Brain Tumor Detection</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+      display: none
+    }
+
+
+    .background {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 400%;
+      text-shadow: 2px 2px 4px #bebb18;
+
+    }
+
+    .yolo-button {
+
+      position: relative;
+      margin: -300px;
+      top: 30%;
+      left: 40%;
+      bottom: 30%;
+
+
+
+    }
+
+    .logo {
+
+
+      width: 70px;
+      height: 40px;
+      margin: 5px;
+      /*<img src="http://www.arvisteknoloji.com/images/arvis_black_2.png" class="logo">*/
+
+    }
+
+    .transbox {
+      margin: 10px;
+      background-color: #ffffff;
+
+      opacity: 0.8;
+    }
+
+    .transbox p {
+      margin: 5%;
+      font-weight: bold;
+      color: #bebb18;
+    }
+
+    .button {
+      border: none;
+      color: rgb(235, 240, 243);
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      width: 250px;
+
+    }
+
+    .button1 {
+      background-color: rgb(0, 0, 0);
+      color: rgb(140, 148, 146);
+      border: 2px solid;
+    }
+
+
+    .button1:hover {
+      color: white;
+
+    }
+
+    .col-sm {
+
+      position: relative;
+      bottom: 300px;
+
+    }
+
+    .bas {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 400%;
+      text-shadow: 2px 2px 10px #000000;
+      color: #000000;
+
+    }
+
+
+    .main_container {
+      margin: 6% 0 0 36%;
+
+      position: relative;
+      width: 25%;
+
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+
+      background: rgba(0, 0, 0, 0.75);
+      /* Black see-through */
+      background-image: url(https://images-ext-1.discordapp.net/external/8ah_nWad6HWSi8TRIr6aQ0CdV-Cd9qzwf-2yH-ZLiQk/https/i.hizliresim.com/bm0n1w5.png);
+      opacity: 70;
+      background-repeat: no-repeat;
+
+      overflow: hidden;
+
+      width: 100%;
+      height: 0;
+      transition: .5s ease;
+
+
+    }
+
+    .main_container:hover .overlay {
+      opacity: 70%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">ANA SAYFA</a>
+      <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJE HAKKINDA</a>
+      <a href="#solutions" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ÇÖZÜMLER</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">İLETİŞİM</a>
+
+    </div>
+  </div>
+
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PROJE HAKKINDA</a>
+    <a href="#solutions" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ÇÖZÜMLER</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">İLETİŞİM</a>
+  </div>
+
+  <!-- Page content -->
+
+  <div class="w3-content" style="max-width:2000px;margin-top:100px">
+    <!-- Automatic Slideshow Images -->
+    <!-- https://content.app-sources.com/s/9811906853015649/uploads/Images/Design_sem_nome_72-2058755.gif -->
+
+    <div class="mySlides w3-display-container w3-center">
+      <img src="https://i.hizliresim.com/iwkw71m.gif" style="width:100%; height: 200;">
+      
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+       
+        <div class="col-sm">
+          
+          <h1 class="bas"><b>Brain Tumor Detection</b></h1>
+
+          <br /><br /><br /><br /><br /><br /><br /><br />
+          <br /><br /><br /><br /><br /><br /><br />
+
+          <div class="yolo-button">
+            <div class="w3-third w3-margin-bottom">
+              <div class="w3-container w3-dark-grey" style="margin-right: 20px;">
+                <p><b>YOLO</b></p>
+                <br>
+                <form action="/predict" method="post" enctype="multipart/form-data">
+
+                  <input class=" button button1" type="file" id=file name="file" /><br /><br />
+                  <b><input class=" button button1" type="submit" value="Detection"></b>
+
+                </form>
+                </br>
+              </div>
+            </div>
+          </div>
+          <div class="yolo-button">
+            <div class="w3-third w3-margin-bottom">
+              <div class="w3-container w3-dark-grey" style="margin-right: 20px; ">
+                <p><b>Mask R-CNN</b></p>
+                <br>
+                <form action="/segmentation" method="post" enctype="multipart/form-data">
+
+                  <input class=" button button1" type="file" id=file name="file" /><br /><br />
+                 <b> <input class=" button button1" type="submit" value="Segmentation"></b>
+
+                </form>
+                </br>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--esas-->
+
+    <!--
+        <form action="/predict" method="post" enctype="multipart/form-data">
+
+          <input class=" button button1" type="file" id=file name="file" /><br /><br />
+          <input class=" button button1" type="submit" value="YOLO">
+          
+
+        </form>
+
+        <form action="/segmentation" method="post" enctype="multipart/form-data">
+
+          <input class=" button button1" type="file" id=file name="file" /><br /><br />
+          <input class=" button button1" type="submit" value="Segmentation"> <br /><br />
+
+        </form>
+      
+      -->
+  </div>
+  </div>
+  </div>
+
+
+  <!-- The about Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
+    <h2 class="w3-wide"><b>Brain Tumor Detection</b></h2>
+
+    <p class="w3-justify">Beyin tümörü, beyinde bazıları kansere yol açabilen anormal hücrelerin büyümesidir. Beyin
+      tümörünü saptamak için genel yöntem Manyetik Rezonans Görüntüleme (MRI) taramalarıdır. MRI görüntülerinden
+      beyindeki anormal doku büyümesi hakkında bilgi belirlenir. Beyin tümörü, insan hayatını olumsuz etkileyen, ölümcül
+      bir hastalıktır. Hastalığın erken teşhisi, hastanın yaşama şansını büyük oranda arttırmaktadır. Bu nedenle
+      doktorların hasta olan kişileri erken teşhis edebilmesi için yardımcı sistem geliştirebilmek projemizin temel
+      hedefi.</p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p><b>Orijinal Görüntü</b></p>
+        <img src="https://els-jbs-prod-cdn.jbs.elsevierhealth.com/cms/attachment/2000864512/2002801287/gr1.jpg"
+          class="w3-round w3-margin-bottom" alt="Random Name" style="width:50%">
+      </div>
+      <div class="w3-third">
+        <p><b>Segmentasyon</b></p>
+        <img
+          src="https://images.deepai.org/machine-learning-models/8f13e1519eb84afda983247f2c0e5565/mri-brain-tumor-detection.jpg"
+          class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p> <b>YOLO</b></p>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFOG_O4bFDzR2HWtpStUoIAoQ8Fb2JwIsst6j-nzOA9jZrPMUVawVUmYHyng__qRl9dIg&usqp=CAU"
+          class="w3-round" alt="Random Name" style="width:70%">
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br> <br>
+
+  <!-- The #solutions Section -->
+  <div class="w3-black" id="solutions">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">ÇÖZÜMLER</h2>
+      <p class="w3-opacity w3-center">Kullanılan Yöntemler</p><br>
+
+
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://miro.medium.com/max/1200/1*9gTfg7VHoTMfXKOqx-78UQ.gif" alt="New York" style="width:100%"
+            class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>YOLOv4</b></p>
+            <p class="w3-opacity"></p>
+            <p>YOLOv4 İle Nesne Tespiti </p>
+            <br><br><br>
+            <button class="w3-button w3-black w3-margin-bottom"
+              onclick="document.getElementById('ticketModal').style.display='block'">Devamını Oku</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://cdn-images-1.medium.com/max/1000/1*QyW8eCwpRzw5rDpW75-YfA.gif" alt="Paris"
+            style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Mask R-CNN</b></p>
+            <p class="w3-opacity"></p>
+            <p>Mask R-CNN İle Segmentasyon</p>
+            <br><br><br>
+            <button class="w3-button w3-black w3-margin-bottom"
+              onclick="document.getElementById('ticketModal1').style.display='block'">Devamını Oku</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://miro.medium.com/max/894/1*jXo6DRQcGv35dFpceR7wUQ.png" alt="San Francisco" style="width:100%"
+            class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Flask</b></p>            
+            <p class="w3-opacity"></p>
+            <p>Flask İle Web Uygulaması</p>
+            <br><br><br>
+            <button class="w3-button w3-black w3-margin-bottom"
+              onclick="document.getElementById('ticketModal2').style.display='block'">Devamını Oku</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- YOLO Modal -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32">
+        <span onclick="document.getElementById('ticketModal').style.display='none'"
+          class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i></i>Yöntem</h2>
+      </header>
+      <div class="w3-container">
+        <h1>YOLOv4</h1>
+
+        <p>   YOLO, gerçek zamanlı olarak nesne algılama gerçekleştirmek için bir Evrişimli Sinir Ağıdır (CNN). CNN'ler,
+          girdi görüntülerini yapılandırılmış veri dizileri olarak işleyebilen ve aralarındaki kalıpları tanımlayabilen
+          sınıflandırıcı tabanlı sistemlerdir . YOLO, diğer ağlardan çok daha hızlı olma avantajına sahiptir ve yine de
+          doğruluğu korur. Modelin test zamanında tüm görüntüye bakmasını sağlar, böylece tahminleri görüntüdeki küresel
+          bağlam tarafından bilgilendirilir. YOLO ve diğer evrişimli sinir ağı algoritmaları, bölgeleri önceden
+          tanımlanmış sınıflara olan benzerliklerine göre “puanlandırır”. Yüksek puan alan bölgeler, en yakından
+          tanımladıkları sınıf ne olursa olsun pozitif algılamalar olarak not edilir. Örneğin, canlı bir trafik
+          akışında, önceden tanımlanmış araç sınıflarına kıyasla videonun hangi bölgelerinin yüksek puan aldığına bağlı
+          olarak farklı araç türlerini tespit etmek için YOLO kullanılabilir.</p>
+
+
+        <button class="w3-button w3-red w3-section"
+          onclick="document.getElementById('ticketModal').style.display='none'">Kapat <i
+            class="fa fa-remove"></i></button>
+
+      </div>
+    </div>
+  </div>
+  <!-- MASK Modal -->
+  <div id="ticketModal1" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32">
+        <span onclick="document.getElementById('ticketModal1').style.display='none'"
+          class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i></i>Yöntem</h2>
+      </header>
+      <div class="w3-container">
+        <h1>Mask R-CNN</h1>
+
+        <p>   Mask R-CNN bir nesne tanıma algoritmasıdır. 2018 yılında Kaiming He ve arkadaşları tarafından piyasaya
+          sürülmüştür. R-CNN ailesinin dördüncü üyesidir. Mask R-CNN, Faster R-CNN algoritmasının var olan mimarisi ile
+          sınırlayıcı kutu (bounding box) çizmesine ek olarak bir nesnenin maskesini tahmin etmek amacıyla Faster R-CNN
+          mimarisine bir dal eklenmiş halidir. Mask R-CNN konusunu incelemeden önce bu mimariyi anlatırken kullanacağım
+          bazı kavramların ne olduğuna bakalım. </p>
+
+
+        <button class="w3-button w3-red w3-section"
+          onclick="document.getElementById('ticketModal1').style.display='none'">Kapat <i
+            class="fa fa-remove"></i></button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Flask -->
+  <div id="ticketModal2" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32">
+        <span onclick="document.getElementById('ticketModal2').style.display='none'"
+          class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i></i>Yöntem</h2>
+      </header>
+      <div class="w3-container">
+        <h1>FLASK, HTML, CSS ve JS</h1>
+
+        <p>   Flask, web uygulamalarını kolayca geliştirmenizi sağlayan bir modüldür. Küçük ve genişletilmesi kolay bir
+          çekirdeğe sahiptir: ORM (Object Relational Manager) veya benzeri özellikler içermeyen bir mikro çerçevedir.
+          URL yönlendirme, şablon motoru gibi birçok harika özelliğe sahiptir. Karmaşık uygulamalara ölçeklendirme
+          yeteneği ile başlamayı hızlı ve kolay hale getirmek için tasarlanmıştır. Flask öneriler sunar, ancak herhangi
+          bir bağımlılık veya proje düzenini zorlamaz. Kullanmak istedikleri araçları ve kitaplıkları seçmek
+          geliştiriciye kalmıştır. </p>
+
+
+        <button class="w3-button w3-red w3-section"
+          onclick="document.getElementById('ticketModal2').style.display='none'">Kapat <i
+            class="fa fa-remove"></i></button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <br> <br><br>
+  
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">İLETİŞİM</h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Adres: Nida Kule Ataşehir Batı No:1/2 Ataşehir/İstanbul<br>
+        <i class="fa fa-phone" style="width:30px"></i> Telefon: +90 530 122 78 43<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> E-mail: info@arvis.com.tr<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="İsim" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Mesaj" required name="essage"">
+          <button class=" w3-button w3-black w3-section w3-right" type="submit">Gönder</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Page Content -->
+  </div>
+
+  <!-- Image of location/map -->
+
+  <center><img src="http://www.arvisteknoloji.com/images/Picture8.png" class="w3-image w3-greyscale-min" width="300"
+      height="300"></center>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="http://www.arvisteknoloji.com/" target="_blank">Arvis</a></p>
+  </footer>
+
+  <script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 4000);
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('ticketModal');
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
