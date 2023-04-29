@@ -5,3 +5,10 @@ matplotlib
 tensorflow
 scikit-image
 opencv-contrib-python
+scipy
+Pillow
+cython
+keras>=2.0.8
+h5py
+imgaug
+IPython[all]
